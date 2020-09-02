@@ -1,0 +1,29 @@
+<mp-navigation-bar />
+<view>
+
+  <view class="check">
+    <view class="itemTitle">如果您清楚以下健康数据，请填入，否则请直接提交评估</view>
+    <view class="miniTitle">腰围</view>
+    <view class="checkButtonBox">
+      <input class="checkInput" bindinput="onWaistline" bindblur="onBlurWaistline" type="number" />
+      <text class="unit">厘米</text>
+    </view>
+    <view class="errorTip">{{waistlineError ? '您的数值超出合理范围' : ''}}</view>
+    <view class="miniTitle">总胆固醇</view>
+    <view class="checkButtonBox">
+      <input class="checkInput" bindinput="onTc" bindblur="onBlurTc" type="number" />
+      <text class="unit">mg/dl</text>
+    </view>
+    <view class="errorTip">{{tcError ? '您的数值超出合理范围' : ''}}</view>
+    <view class="miniTitle">高密度脂蛋白胆固醇</view>
+    <view class="checkButtonBox">
+      <input class="checkInput" bindinput="onHdlc" bindblur="onBlurHdlc" type="number" />
+      <text class="unit">mg/dl</text>
+    </view>
+    <view class="errorTip">{{hdlcError ? '您的数值超出合理范围' : ''}}</view>
+
+    <button bindtap="secendCheck" class="submitButton" style="width: 100% !important">
+      提交评估
+    </button>
+  </view> 
+</view>

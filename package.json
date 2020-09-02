@@ -1,0 +1,15 @@
+{
+  "name": "wanhuminiprogram",
+  "version": "1.0.0",
+  "description": "万户健康小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.8.21",
+    "weapp-cookie": "^1.4.6"
+  }
+}

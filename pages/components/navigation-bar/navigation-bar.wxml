@@ -1,0 +1,5 @@
+<view class="navBox" style="margin-top:{{statusBarHeight }}px; " >
+</view>
+<view class="logoView" style="margin-top:{{statusBarHeight }}px">
+  <image class="logo" src="../../../images/logo.png"></image> 
+</view>

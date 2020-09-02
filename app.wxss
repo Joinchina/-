@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100vw;
+}
+.errorTip{
+  margin-top: 5rpx;
+  text-align: left;
+  color: #C8161D;
+}
+
+.submitButton {
+  width: 80% !important;
+  background: #c8161d;
+  border-radius: 8rpx;
+  font-size: 40rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: normal;
+  line-height: 60rpx;
+  color: #fff;
+  opacity: 0.9;
+  margin-top: 32rpx;
+}
+.submitButton[disabled]{
+  background: #B2B2B2 !important;
+  color: #fff !important;
+}
+
+.normalButton{
+  width: 80% !important;
+  background: #FFFFFF;
+  border:2rpx solid #E8E8E8; 
+  border-radius: 8rpx;
+  font-size: 40rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: normal;
+  line-height: 60rpx;
+  color: #222222;
+  opacity: 0.9;
+  margin-top: 32rpx;
+}
+.check {
+  margin: 72rpx 46rpx 14rpx 46rpx;
+}
+
+.check .itemTitle {
+  padding-top: 72rpx;
+  font-size: 40rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: 600;
+  line-height: 60rpx;
+  color: #333;
+  opacity: 1;
+}
+
+.check .checkButtonBox {
+  display: flex;
+}
+
+.checkButtonBox .checkButton {
+  margin-top: 24rpx;
+  width: calc(50% - 24rpx);
+  height: 88rpx;
+  background: #fff;
+  border: 2rpx solid #e8e8e8;
+  border-radius: 8rpx;
+  font-size: 36rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: normal;
+  line-height: 88rpx;
+  color: #222;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.checkButtonBox .selected {
+  border: 2rpx solid #c8161d;
+  color: #c8161d;
+}
+
+.checkButtonBox .left {
+  margin-right: 48rpx;
+}
+
+.checkInput {
+  height: 88rpx;
+  background: #fff;
+  border: 2rpx solid #e8e8e8;
+  opacity: 1;
+  border-radius: 8rpx;
+  color: #222;
+  width: 80%;
+}
+
+.unit {
+  margin-left: 24rpx;
+  font-size: 36rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: normal;
+  line-height: 88rpx;
+  color: #222;
+  opacity: 0.9;
+}
+
+.miniTitle {
+  padding-top: 36rpx;
+  padding-bottom: 24rpx;
+  font-size: 40rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: normal;
+  line-height: 60rpx;
+  color: #333;
+  opacity: 1;
+}

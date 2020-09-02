@@ -1,0 +1,51 @@
+<view >
+  <mp-navigation-bar />
+
+  <view class="check" >
+    <view class="itemTitle">您现在是否吸烟</view>
+    <view class="checkButtonBox">
+      <view bindtap="onSmoke" id="0" class="checkButton left {{smoke == '0' ? 'selected': ''}}">
+        从未
+      </view>
+      <view bindtap="onSmoke" id="0.5" class="checkButton {{smoke == '0.5' ? 'selected': ''}}">
+        已戒烟
+      </view>
+    </view>
+    <view class="checkButtonBox">
+      <view bindtap="onSmoke" id="1" class="checkButton {{smoke == '1' ? 'selected': ''}}" style="width: 100%">
+        吸烟或经常被迫吸二手烟
+      </view>
+    </view>
+    <view class="itemTitle">您当前处于</view>
+    <view class="checkButtonBox">
+      <view bindtap="onRegion" id="1" class="checkButton left {{region == '1' ? 'selected': ''}}">
+        北方
+      </view>
+      <view bindtap="onRegion" id="2" class="checkButton {{region == '2' ? 'selected': ''}}">
+        南方
+      </view>
+    </view> 
+    <view class="itemTitle">您居住在城市或农村</view>
+    <view class="checkButtonBox">
+      <view bindtap="onUrbanRural" id="1" class="checkButton left {{urbanRural == '1' ? 'selected': ''}}">
+        城市
+      </view>
+      <view bindtap="onUrbanRural" id="0" class="checkButton {{urbanRural == '0' ? 'selected': ''}}">
+        农村
+      </view>
+    </view> 
+    <view class="itemTitle">您的父母、兄弟是否有人曾患有急性心肌梗死、冠心病、脑卒中</view>
+    <view class="checkButtonBox">
+      <view bindtap="onASCVDFamilyHistory" id="1" class="checkButton left {{ASCVDFamilyHistory == '1' ? 'selected': ''}}">
+        有
+      </view>
+      <view bindtap="onASCVDFamilyHistory" id="0" class="checkButton {{ASCVDFamilyHistory == '0' ? 'selected': ''}}">
+        无
+      </view>
+    </view>  
+     <button bindtap="secendCheck" class="submitButton" disabled="{{!(smoke !== null && region !== null && urbanRural !== null && ASCVDFamilyHistory !== null)}}"  style="width: 100% !important">
+    继续（2/3页）
+  </button>
+  </view>
+ 
+</view>

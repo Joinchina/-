@@ -1,0 +1,80 @@
+.Canvas{
+  width: 100vw;
+  min-height: 75vh; 
+  background-color: #F8F8F8;
+  z-index: 100;
+}
+.riskBox {
+  text-align: center;
+  width: 100%;
+  margin-top: 48rpx;
+  padding-bottom: 40rpx;
+  border-bottom:12rpx solid #E8E8E8;
+} 
+
+.riskBox .riskResultImg {
+  width: 96rpx;
+  height: 96rpx; 
+  opacity: 1;
+}
+
+.riskBox .riskResult {
+  margin-top: 16rpx;
+  font-size: 40rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: 600;
+  line-height: 60rpx;
+  color: #222222;
+  opacity: 1;
+}
+.riskBox .riskResult text{
+  color: #C8161D;
+}
+
+.resultBox{
+  margin: 48rpx 32rpx;
+}
+.resultBox .userInfo{
+  margin: 0rpx 24rpx;
+  line-height: 48rpx;
+  color: #333333
+} 
+
+.adviseBox{
+  margin-top: 48rpx;
+  background:rgba(255,255,255,1);
+  opacity:1;
+  border-radius:16rpx;
+  padding: 40rpx 24rpx;
+}
+.adviseBox .tip{
+  font-size:36rpx;
+  font-family:Hiragino Sans GB;
+  font-weight:600;
+  line-height:56rpx;
+  color:#333333;
+  opacity:1;
+}
+.advise{
+  padding-top: 24rpx; 
+  font-size:36rpx;
+  font-family:Hiragino Sans GB;
+  font-weight:normal;
+  line-height:44rpx;
+  color:#666666;
+  opacity:1;
+}
+.noticeBox{
+  padding-top: 28rpx;
+  display: flex;
+}
+.notice{
+  margin-top: 24rpx;
+  margin-right: 10rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.button{
+  margin-bottom: 48rpx;
+} 
+

@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/CCVDCheck/Start/index",
+    "pages/CCVDCheck/Check/Step1/index",
+    "pages/CCVDCheck/Check/Step2/index",
+    "pages/CCVDCheck/Check/Step3/index",
+    "pages/CCVDCheck/Result/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#F9F9F9",
+    "navigationBarBackgroundColor": "#F9F9F9",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

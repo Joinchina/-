@@ -1,0 +1,33 @@
+<mp-navigation-bar />
+<view> 
+  <view class="check">
+    <view class="itemTitle">您当前是否在用降压类药物</view>
+    <view class="checkButtonBox">
+      <view bindtap="onIsHypotensor" id="1" class="checkButton left {{isHypotensor == '1' ? 'selected': ''}}">
+        是
+      </view>
+      <view bindtap="onIsHypotensor" id="0" class="checkButton {{isHypotensor == '0' ? 'selected': ''}}">
+        否
+      </view>
+    </view>
+    <view class="itemTitle">近期测量的血压的高压值（收缩压）是多少</view>
+    <view class="checkButtonBox">
+      <input class="checkInput" bindinput="onCurrentSBP" type="number" min="70" max="200" bindblur="onBlurCurrentSBP" />
+      <text class="unit">mmHg</text>
+    </view>
+     <view class="errorTip">{{currentSBPError ? '您的数值超出合理范围' : ''}}</view>
+    <view class="itemTitle">您是否患有糖尿病</view>
+    <view class="checkButtonBox">
+      <view bindtap="onDiabetes" id="1" class="checkButton left {{diabetes == '1' ? 'selected': ''}}">
+        是
+      </view>
+      <view bindtap="onDiabetes" id="0" class="checkButton {{diabetes == '0' ? 'selected': ''}}">
+        否
+      </view>
+    </view> 
+    <button bindtap="secendCheck" class="submitButton" disabled="{{!(isHypotensor !== null && diabetes !== null && currentSBP !== null && currentSBP >= 70  && currentSBP <=  200)}}" style="width: 100% !important">
+    继续（1/3页）
+  </button>
+  </view>
+  
+</view>

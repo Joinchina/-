@@ -1,0 +1,124 @@
+<mp-navigation-bar />
+<view class="main">
+
+  <view wx:if="{{!userInfo}}">
+    <view class="footTip">您还未关注我们的公众号</view>
+    <view class="footTip">请先点击关注</view>
+    <official-account></official-account>
+  </view>
+  <view wx:if="{{userInfo}}">
+    <text class="title">中国居民心脑血管病风险评估</text>
+    <image class="check-bg" src="../../../images/check_logo.png"></image>
+    <button 
+            loading="{{loading}}" wx:if="{{!patientInfo}}" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber" size="default" class="submitButton">
+      开始评估
+    </button>
+    <button loading="{{loading}}" wx:if="{{patientInfo}}" bindtap="startCheck" size="default" class="submitButton">
+      开始评估
+    </button>
+    <view class="footTip">
+      <text>依据《中国心血管病风险评估和管理指南》开发</text>
+    </view>
+
+    <!-- 登录 start -->
+    <view wx:if="{{showLoginModal === true}}" class="modalBox">
+      <view class="background" style="top: {{statusBarHeight + 50 }}px; height: calc(100% - {{statusBarHeight + 50}}px)"></view>
+      <view class="loginModal">
+        <view class="title">会员登录</view>
+        <view class="formTitle"> 手机号</view>
+        <input 
+          value="{{phone}}"
+          class="checkInput" 
+          bindinput="onPhoneChange" 
+          bindblur="onBlurPhone"
+          bindblur="onBlurPhone" 
+          type="number" 
+          maxlength="12"
+          style="width: calc(100% - 24rpx); text-align: left;padding-left: 24rpx" 
+        />
+        <view class="errorTip">{{phoneError ? '请输入正确的手机号' : ''}}</view>
+        <view class="formTitle"> 验证码</view>
+        <view style="display:flex">
+          <input class="checkInput" bindinput="onCodeChange" bindblur="onBlurCode" type="number" style="width: 50%;; text-align: left;padding-left: 24rpx" />
+          <button class="getCodeBtn"  bindtap="getVerifyCode"   >
+          {{!disabledGetCapchar ? '获取验证码': timeCount+ '秒'}}
+          </button>
+        </view>
+        <view class="errorTip">{{verifyCodeError}}</view>
+        <view class="tip">
+          如果您未注册，点击提交，表示您同意《
+          <a>PBM福利计划会员服务</a>》将自动注册为万户健康会员
+        </view>
+
+        <view style="display:flex">
+          <button 
+            bindtap="onCancle"
+            class="normalButton" 
+            style="width: calc(50% - 16rpx) !important;margin-right: 32rpx"
+            >
+            取消
+            </button>
+          <button  
+            loading="{{loading}}"
+            bindtap="onLogin"
+            class="submitButton" 
+            disabled="{{!(phone && !phoneError && verifyCode && verifyCode.length == 4)}}" 
+            style="width: calc(50% - 16rpx) !important"
+          >
+          提交
+          </button>
+        </view>
+      </view>
+    </view>
+    <!-- 登录 end -->
+    <!-- 完善信息 start -->
+    <view wx:if="{{showModal === true}}" class="modalBox">
+
+      <view class="background" style="top: {{statusBarHeight + 50 }}px; height: calc(100% - {{statusBarHeight + 50}}px)"></view>
+      <view class="loginModal">
+        <view class="title">为出具您的个人评估报告
+        </view>
+        <view class="title">请先完善信息</view>
+        <view class=" formTitle">姓名</view>
+        <input 
+          maxlength="10"
+          value="{{name}}"
+          class="checkInput" 
+          bindinput="onNameChange" 
+          bindblur="onBlurName"  
+          style="width: calc(100% - 24rpx); text-align: left;padding-left: 24rpx" 
+        />
+        <view class="formTitle"> 身份证号</view>
+        <view style="display:flex">
+          <input 
+            maxlength="18"
+            value="{{idCard}}"
+            class="checkInput" 
+            bindinput="onIdCardChange" 
+            bindblur="onBlurIdCard" 
+            type="idcard" 
+            style="width: calc(100% - 24rpx);text-align: left;padding-left: 24rpx" />
+
+        </view>
+         <view class="errorTip">{{idCardError || ''}}</view>
+        <view class="tip">
+          如果您未注册，点击提交，表示您同意《
+          <a>PBM福利计划会员服务协议</a>》将自动注册为万户健康会员
+        </view>
+
+        <view style="display:flex">
+          <button 
+            bindtap="onCancle" class="normalButton" style="width: calc(50% - 16rpx) !important;margin-right: 32rpx">取消</button>
+          <button 
+            loading="{{loading}}"
+            bindtap ="updatePatientInfo" 
+            class="submitButton" 
+            disabled="{{!(name && idCard)}}" 
+            style="width: calc(50% - 16rpx) !important"
+          >提交</button>
+        </view>
+      </view>
+    </view>
+    <!-- 完善信息 end -->
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<mp-navigation-bar />
+<view style="margin-top: 24rpx">
+  <view class="imgBox">
+<canvas canvas-id='Canvas'  class='Canvas'></canvas>
+  </view>
+  
+  <!-- <canvas canvas-id='1Canvas'  class='Canvas'>
+
+    <view class="riskBox">
+      <image class="riskResultImg" src="../../../images/{{currentRisk.image || ''}}.png"></image>
+      <view class="riskResult">心脑血管病
+        <text style="color: {{currentRisk.color}}">{{currentRisk.text || ''}}</text>
+      </view>
+    </view>
+
+    <view class="resultBox">
+      <view class="userInfo">被评估人：{{name || ''}} </view>
+      <view class="userInfo">评估时间：{{date || ''}}</view>
+      <view class="adviseBox">
+        <view class="tip">干预建议：</view>
+        <view class="advise">
+         {{advice}}
+        </view>
+      </view>
+       <view class="noticeBox">
+          <view>
+              <image class="notice" src="../../../images/notice.png"></image>
+          </view>
+           <view class="advise">
+          温馨提示本工具仅用于心脑血管病风险的初步评估，不能代替临床诊断，具体治疗措施需咨询专业医师。
+        </view>
+        </view>
+    </view>  
+    
+</canvas> -->
+<button class="submitButton button" bindtap="saveResultImg">保存到相册</button> 
+</view>
